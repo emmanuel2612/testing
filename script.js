@@ -1,33 +1,15 @@
-window.onload = () => {
+window.onload = () =>{
 
-    const cardOne = document.getElementById("cardOne");
-    const demo = document.getElementById("demo");
-    const originalInnerHTML = demo.innerHTML;
+let vh = window.innerHeight * 0.01;
 
-cardOne.onclick = () => {
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
-    cardOne.classList.toggle("flipToAnswer");
-
-    if (cardOne.classList.contains("flipToAnswer")){
-
-        setTimeout(() => {
-            demo.innerHTML = "hello";
-        }, 150);
-    }
-
-    else{
-        setTimeout(() => {
-            demo.innerHTML = originalInnerHTML;
-        }, 150);
-        
-    }
-    
-
-}
-
-
-
+// We listen to the resize event
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
 
 
 }
