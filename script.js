@@ -34,7 +34,7 @@ window.onload = () => {
 
         if (mobileMenu.style.display === "flex") {
 
-            document.body.style.overflowY = "visible";
+            document.body.style.overflow = "visible";
 
             mobileMenu.style.height = "0vh";
 
@@ -52,7 +52,7 @@ window.onload = () => {
 
         else {
 
-            document.body.style.overflowY = "hidden";
+            document.body.style.overflow = "hidden";
 
             mobileMenu.style.display = "flex";
 
