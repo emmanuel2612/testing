@@ -32,7 +32,7 @@ window.onload = () => {
 
     mobileMenuButton.onclick = () => {
 
-        document.documentElement.style.overflowY = "visible";
+       document.body.style.overflowY = "visible";
 
         if (mobileMenu.style.display === "flex") {
 
@@ -52,7 +52,7 @@ window.onload = () => {
 
         else {
 
-            document.documentElement.style.overflowY = "hidden";
+            document.body.style.overflowY = "hidden";
 
             mobileMenu.style.display = "flex";
 
