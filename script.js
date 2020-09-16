@@ -32,9 +32,9 @@ window.onload = () => {
 
     mobileMenuButton.onclick = () => {
 
-       document.body.style.overflowY = "visible";
-
         if (mobileMenu.style.display === "flex") {
+
+            document.body.style.overflowY = "visible";
 
             mobileMenu.style.height = "0vh";
 
