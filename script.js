@@ -15,9 +15,6 @@ window.onload = () => {
 
         setTimeout(() => {
             modal.style.opacity = "1";
-            document.body.style.overflow = "hidden";
-            document.documentElement.style.overflow = "hidden";
-            modal.style.overflow = "hidden";
         }, 6000);
 
         console.log("hey");
