@@ -8,6 +8,8 @@ window.onload = () => {
 
     const showModal = () => {
 
+        document.body.style.overflow = "hidden";
+
         setTimeout(() => {
             modal.style.display = "flex";
         }, 5000);
