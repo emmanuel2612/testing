@@ -8,7 +8,6 @@ window.onload = () => {
 
     const showModal = () => {
 
-        document.body.style.overflow = "hidden";
 
         setTimeout(() => {
             modal.style.display = "flex";
@@ -16,6 +15,7 @@ window.onload = () => {
 
         setTimeout(() => {
             modal.style.opacity = "1";
+            document.body.style.overflow = "hidden";
         }, 6000);
 
         console.log("hey");
