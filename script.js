@@ -1,78 +1,38 @@
 window.onload = () => {
 
-    document.getElementById("billboard").style.minHeight = window.innerHeight + 'px';
+
+    const menu = document.querySelector(".menu");
+    const modal = document.querySelector(".modal-container");
+    const close = document.querySelector(".close");
 
 
-    /* Change Image for mobile */
-    const windowResize = window.onresize = () => {
+    const showModal = () => {
 
-        const adSectionImageOne = document.getElementById("ad-section-image-1");
-        const mq = window.matchMedia("(max-width: 500px)"); /* Save the media query match rule in a variable*/
+        setTimeout(() => {
+            modal.style.display = "flex";
+        }, 5000);
 
-        if (mq.matches) { /* If the rule MATCHES*/
-            adSectionImageOne.src = "images/section-1-bg-m.jpg"; /* Change image */
-        } else {
-            adSectionImageOne.src = "images/section-1-bg.jpg";
-        }
+        setTimeout(() => {
+            modal.style.opacity = "1";
+        }, 6000);
 
-
+        console.log("hey");
     }
 
-    windowResize();
 
-    /* End of change image for mobile*/
+    close.onclick = () => {
 
+        modal.style.opacity = "0";
 
-
-    /* Show and Hide Mobile Menu */
-
-    const mobileMenuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const mobileMenuLinks = document.querySelectorAll(".mobile-nav-a");
-
-    mobileMenuButton.onclick = () => {
-
-        if (mobileMenu.style.display === "flex") {
-
-            document.body.style.overflow = "visible";
-
-            mobileMenu.style.height = "0vh";
-
-            setTimeout(() => {
-                for (i = 0; i < mobileMenuLinks.length; i++) {
-                    mobileMenuLinks[i].style.display = "none";
-                }
-            }, 200);
-
-            setTimeout(() => {
-                mobileMenu.style.display = "none";
-            }, 500);
-
-        }
-
-        else {
-
-            document.body.style.overflow = "hidden";
-
-            mobileMenu.style.display = "flex";
-
-            setTimeout(() => {
-                mobileMenu.style.height = "100vh";
-            }, 100);
-
-            setTimeout(() => {
-                for (i = 0; i < mobileMenuLinks.length; i++) {
-                    mobileMenuLinks[i].style.display = "block";
-                }
-            }, 200);
-        }
-
+        setTimeout(() => {
+            modal.style.display = "none"
+        }, 300);
     }
 
-    /* End of Show and Hide Mobile Menu */
-
-
+    showModal();
 
 
 
 }
+
+
