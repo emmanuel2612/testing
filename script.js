@@ -1,40 +1,42 @@
 window.onload = () => {
 
+    var body = document.body;
+    var html = document.documentElement;
 
-    const modal = document.querySelector(".modal-container");
-    const close = document.querySelector(".close");
 
-    const showModal = () => {
 
-        setTimeout(() => {
-            modal.style.display = "flex";
-        }, 5000);
+    /* SHOW CONTACT */
 
-        setTimeout(() => {
-            modal.style.opacity = "1";
-            document.documentElement.style.overflow = "hidden";
-            document.body.style.overflow = "hidden";
-            modal.body.style.overflow = "hidden";
-        }, 6000);
+    var contactButton = document.getElementById("contact-button");
+    var contactBox = document.getElementById("contact");
+
+
+
+
+   
+
+
+
+    // Type Effect 
+
+    var i = 0;
+    var txt = 'Visualiser. Executer. Developer.'; /* The text */
+    var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("typeText").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+
+            typeText.style.height = "100%";
+            typeText.style.opacity = "1";
+        }
     }
 
+    typeWriter();
 
-
-    close.onclick = () => {
-
-        modal.style.opacity = "0";
-        document.documentElement.style.overflow = "visible";
-            document.body.style.overflow = "visible";
-            modal.body.style.overflow = "visible";
-
-        setTimeout(() => {
-            modal.style.display = "none"
-        }, 300);
-    }
-
-    showModal();
-
+    
+    
 
 }
-
-
