@@ -1,19 +1,24 @@
 window.onload = () => {
 
-    var body = document.body;
-    var html = document.documentElement;
-
-
-
-    /* SHOW CONTACT */
-
-    var contactButton = document.getElementById("contact-button");
-    var contactBox = document.getElementById("contact");
-
-
+    const menuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const close = document.getElementById("close");
+    
 
 
    
+    menuButton.onclick = () => {
+
+       mobileMenu.style.display = "block";
+
+}
+
+ close.onclick = () => {
+   mobileMenu.style.display = "none"
+ }
+
+    
+
 
 
 
@@ -35,6 +40,10 @@ window.onload = () => {
     }
 
     typeWriter();
+
+
+
+
 
     
     
